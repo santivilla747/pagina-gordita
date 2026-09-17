@@ -187,8 +187,8 @@ p {
 
 .video-capibara {
     display: block;
-    width: 90%;
-    max-width: 400px;
+    width: 300px;
+    max-width: 100%;
     height: auto;
     margin: 25px auto;
     border-radius: 15px;
