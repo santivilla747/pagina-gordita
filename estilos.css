@@ -184,3 +184,13 @@ p {
 .corazones span:nth-child(8) {
   font-size: 50px;
 }
+
+.video-capibara {
+    display: block;
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    margin: 25px auto;
+    border-radius: 15px;
+    animation: aparecer 1.2s ease 0.4s both;
+}
