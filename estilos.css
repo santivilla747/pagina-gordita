@@ -11,6 +11,7 @@ body {
 h1 {
     color: #c2185b;
     text-align: center;
+    animation: aparecer 0.8s ease;
     }
 
 .contenido {
@@ -26,3 +27,47 @@ h1 {
 p {
     line-height: 1.6;
     }
+
+.gif-capibara {
+    display: block;
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    animation: aparecer 1.2s ease 0.4s both;
+    }
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+    }
+
+.boton-sorpresa {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 25px;
+    background-color: #c2185b;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    }
+
+#mensaje-sorpresa {
+    display: none;
+    text-align: center;
+    font-size: 20px;
+    color: #c2185b;
+}
