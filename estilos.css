@@ -28,18 +28,7 @@ p {
     line-height: 1.6;
     }
 
-.gif-capibara {
-    display: block;
-    width: 300px;
-    max-width: 100%;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    border-radius: 15px;
-    animation: aparecer 1.2s ease 0.4s both;
-    }
+
 
 @keyframes aparecer {
     from {
