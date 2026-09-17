@@ -71,3 +71,118 @@ p {
     font-size: 20px;
     color: #c2185b;
 }
+
+
+
+@keyframes caer {
+  0% {
+    top: -50px;
+    transform: translateX(0) rotate(0deg);
+  }
+
+  25% {
+    transform: translateX(25px) rotate(90deg);
+  }
+
+  50% {
+    transform: translateX(-25px) rotate(180deg);
+  }
+
+  75% {
+    transform: translateX(25px) rotate(270deg);
+  }
+
+  100% {
+    top: 100vh;
+    transform: translateX(0) rotate(360deg);
+  }
+}
+
+.corazones span {
+  position: fixed;
+  top: -50px;
+  font-size: 30px;
+  animation: caer 6s linear infinite;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.corazones span:nth-child(1) {
+  left: 10%;
+  animation-duration: 5s;
+  animation-delay: 0s;
+}
+
+.corazones span:nth-child(2) {
+  left: 20%;
+  animation-duration: 7s;
+  animation-delay: 1s;
+}
+
+.corazones span:nth-child(3) {
+  left: 35%;
+  animation-duration: 6s;
+  animation-delay: 2.5s;
+}
+
+.corazones span:nth-child(4) {
+  left: 48%;
+  animation-duration: 8s;
+  animation-delay: 0.5s;
+}
+
+.corazones span:nth-child(5) {
+  left: 60%;
+  animation-duration: 5.5s;
+  animation-delay: 3s;
+}
+
+.corazones span:nth-child(6) {
+  left: 72%;
+  animation-duration: 7.5s;
+  animation-delay: 1.5s;
+}
+
+.corazones span:nth-child(7) {
+  left: 85%;
+  animation-duration: 6.5s;
+  animation-delay: 4s;
+}
+
+.corazones span:nth-child(8) {
+  left: 95%;
+  animation-duration: 9s;
+  animation-delay: 2s;
+}
+
+.corazones span:nth-child(1) {
+  font-size: 20px;
+}
+
+.corazones span:nth-child(2) {
+  font-size: 35px;
+}
+
+.corazones span:nth-child(3) {
+  font-size: 25px;
+}
+
+.corazones span:nth-child(4) {
+  font-size: 45px;
+}
+
+.corazones span:nth-child(5) {
+  font-size: 22px;
+}
+
+.corazones span:nth-child(6) {
+  font-size: 38px;
+}
+
+.corazones span:nth-child(7) {
+  font-size: 28px;
+}
+
+.corazones span:nth-child(8) {
+  font-size: 50px;
+}
