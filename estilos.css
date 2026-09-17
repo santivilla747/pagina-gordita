@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+    }
+
+body {
+    background-color: #ffe6ee;
+    color: #4a2636;
+    font-family: Arial, sans-serif;
+    }
+
+h1 {
+    color: #c2185b;
+    text-align: center;
+    }
+
+.contenido {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 0 10px;
+
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    }
+
+p {
+    line-height: 1.6;
+    }
