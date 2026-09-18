@@ -1,4 +1,4 @@
-const sobre = document.querySelector(".sobre"); // ¡Corregido el const en minúscula!
+const sobre = document.querySelector(".sobre");
 const carta = document.querySelector(".carta");
 const tituloCarta = document.querySelector(".titulo-carta");
 const cerrarCarta = document.querySelector(".cerrar-carta");
@@ -8,21 +8,21 @@ sobre.addEventListener("click", function () {
     // Activa la animación del sobre
     sobre.classList.add("abriendo");
 
-    // Espera 0.5 segundos antes de mostrar la carta
+    // Espera a que termine la animación del sobre
     setTimeout(function () {
-
         sobre.style.display = "none";
         tituloCarta.style.display = "none";
         
-        // 1. Primero hacemos que la carta ocupe espacio en la pantalla
+        // 1. Mostramos la caja de la carta (pero sigue invisible por la opacidad 0)
         carta.style.display = "block";
+        
+        // 2. Truco infalible: Obligamos al navegador a procesar el cambio
+        carta.offsetHeight; 
+        
+        // 3. Le agregamos la clase que hace la magia de aparecer suavemente
+        carta.classList.add("mostrar");
 
-        // 2. Truco pro: un micro-retraso para que el CSS detecte el cambio y haga el fundido
-        setTimeout(function () {
-            carta.classList.add("mostrar");
-        }, 10);
-
-        // Crea los brillitos (¡Este código tuyo está perfecto!)
+        // Crea los brillitos (tu código)
         for (let i = 0; i < 8; i++) {
             const brillo = document.createElement("span");
             brillo.textContent = "✨";
@@ -36,7 +36,7 @@ sobre.addEventListener("click", function () {
             });
         }
 
-        // Lleva suavemente la pantalla hacia la carta
+        // Baja la pantalla hacia la carta
         carta.scrollIntoView({
             behavior: "smooth",
             block: "center"
@@ -47,20 +47,14 @@ sobre.addEventListener("click", function () {
 
 cerrarCarta.addEventListener("click", function () {
 
-    // 1. Le quitamos la clase para que haga el fundido hacia la transparencia
+    // 1. Le sacamos la clase para que se vuelva transparente suavemente
     carta.classList.remove("mostrar");
 
-    // 2. Esperamos que termine el fundido (800ms) para ocultarla del todo
+    // 2. Esperamos 800ms (lo que dura la transición) y la ocultamos del todo
     setTimeout(function () {
         carta.style.display = "none";
         tituloCarta.style.display = "block";
         sobre.style.display = "block";
         sobre.classList.remove("abriendo");
-
-        // Opcional: Volvemos a enfocar el sobre
-        sobre.scrollIntoView({
-            behavior: "smooth",
-            block: "center"
-        });
     }, 800); 
 });
