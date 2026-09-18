@@ -342,10 +342,14 @@ p {
     font-size: 9px;
     color: #b8a0aa;
     margin-top: -5px;
-}
+
 .video {
     max-width: 400px;
     margin: 20px auto;
+    padding: 8px;
+    background-color: #fce4ec;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(194, 24, 91, 0.15);
 }
 
 .video iframe {
