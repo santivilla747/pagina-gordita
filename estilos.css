@@ -344,6 +344,7 @@ p {
     margin-top: -5px;
 
 .video {
+    width: 90%;
     max-width: 400px;
     margin: 20px auto;
     padding: 8px;
@@ -351,7 +352,6 @@ p {
     background-color: #fce4ec;
     border: 2px solid #f8bbd0;
     border-radius: 20px;
-
     box-shadow: 0 5px 15px rgba(194, 24, 91, 0.15);
 }
 
