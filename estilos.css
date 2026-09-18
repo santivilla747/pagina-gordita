@@ -197,42 +197,37 @@ p {
     animation: aparecer 1.2s ease 0.4s both;
 }
 
-.carta {
+ .carta {
     display: none;
     margin: 20px auto;
     padding: 25px;
     max-width: 500px;
     background-color: #fffdf7;
     background-image: repeating-linear-gradient(
-    transparent,
-    transparent 30px,
-    #f3e5e5 31px
-);
+        transparent,
+        transparent 30px,
+        #f3e5e5 31px
+    );
     border: 1px solid #f8bbd0;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.10);
-    animation: abrirCarta 0.7s ease;
     font-family: "Caveat", cursive;
-font-size: 25px;
+    font-size: 25px;
     position: relative;
+    
+    /* ACÁ ESTÁ LA MAGIA NUEVA */
+    opacity: 0; /* Arranca transparente */
+    transform: translateY(-20px); /* Arranca un poquito más arriba */
+    transition: opacity 0.8s ease, transform 0.8s ease; /* El fundido suave */
 }
 
-@keyframes abrirCarta {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px) scaleY(0.85) rotate(-2deg);
-    }
-
-    60% {
-        opacity: 1;
-        transform: translateY(5px) scaleY(1.03) rotate(-1deg);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0) scaleY(1) rotate(-1deg);
-    }
+/* ESTA ES LA CLASE QUE LE VAMOS A AGREGAR CON JS */
+.carta.mostrar {
+    opacity: 1; /* Se vuelve totalmente visible */
+    transform: translateY(0); /* Baja a su posición normal */
 }
+
+
 
 .firma-final {
     text-align: center;
