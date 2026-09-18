@@ -343,3 +343,14 @@ p {
     color: #b8a0aa;
     margin-top: -5px;
 }
+.video {
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.video iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 15px;
+}
