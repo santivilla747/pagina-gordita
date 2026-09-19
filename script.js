@@ -58,3 +58,5 @@ cerrarCarta.addEventListener("click", function () {
         sobre.classList.remove("abriendo");
     }, 800); 
 });
+
+const fechaMendoza = new Date("2026-11-22T19:00:00");
