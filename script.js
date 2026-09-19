@@ -60,3 +60,31 @@ cerrarCarta.addEventListener("click", function () {
 });
 
 const fechaMendoza = new Date("2026-11-22T19:00:00");
+function actualizarContador() {
+
+    const ahora = new Date();
+
+    const diferencia = fechaMendoza - ahora;
+
+    const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+
+const horas = Math.floor(
+    (diferencia / (1000 * 60 * 60)) % 24
+);
+
+const minutos = Math.floor(
+    (diferencia / (1000 * 60)) % 60
+);
+
+const segundos = Math.floor(
+    (diferencia / 1000) % 60
+);
+    document.getElementById("dias").textContent = dias;
+document.getElementById("horas").textContent = horas;
+document.getElementById("minutos").textContent = minutos;
+document.getElementById("segundos").textContent = segundos;
+}
+
+actualizarContador();
+
+setInterval(actualizarContador, 1000);
