@@ -367,3 +367,9 @@ p {
     border: none;
     border-radius: 14px;
 }
+
+.contador-mendoza span {
+    font-size: 32px;
+    font-weight: bold;
+    color: #c2185b;
+}
