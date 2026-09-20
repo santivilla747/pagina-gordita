@@ -3,11 +3,12 @@
     }
 
 body {
-    background-color: #fff9d9;
-    color: #5c4813;
-    font-family: "DynaPuff", cursive;
-    }
-
+ 
+body {
+    background-color: #3b3520;
+    color: #f5e9b8;
+    font-family: Arial, sans-serif;
+}
 h1 {
     color: #d89b00;
     text-align: center;
@@ -30,8 +31,7 @@ h1 {
     max-width: 600px;
     margin: 20px auto;
     padding: 0 10px;
-
-    background-color: white;
+background-color: #51482a;
     border-radius: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     }
