@@ -3,13 +3,13 @@
     }
 
 body {
-    background-color: #ffe6ee;
-    color: #4a2636;
+    background-color: #fff9d9;
+    color: #5c4813;
     font-family: "DynaPuff", cursive;
     }
 
 h1 {
-    color: #c2185b;
+    color: #d89b00;
     text-align: center;
     font-family: "DynaPuff", cursive;
     font-weight: 600;
@@ -18,7 +18,7 @@ h1 {
     }
 
     h2 {
-    color: #ad1457;
+    color: #b8860b;
     font-family: "DynaPuff", cursive;
     font-weight: 400;
     font-size: 22px;
