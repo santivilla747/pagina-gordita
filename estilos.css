@@ -208,7 +208,7 @@ p {
         transparent 30px,
         #f3e5e5 31px
     );
-    border: 1px solid #f8bbd0;
+    border: none;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.10);
     font-family: "Caveat", cursive;
@@ -355,7 +355,7 @@ p {
 
     padding: 8px;
     background-color: #fce4ec;
-    border: 2px solid #f8bbd0;
+    border: none;
     border-radius: 20px;
     box-shadow: 0 5px 15px rgba(194, 24, 91, 0.15);
 }
