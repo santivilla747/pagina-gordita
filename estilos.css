@@ -1,8 +1,6 @@
 * {
     box-sizing: border-box;
     }
-
-body {
  
 body {
     background-color: #3b3520;
@@ -244,7 +242,7 @@ p {
     margin: 25px auto;
     padding: 20px;
     text-align: center;
-    background-color: none
+    background-color: transparent;
     border: none;
     border-radius: 15px;
     cursor: pointer;
