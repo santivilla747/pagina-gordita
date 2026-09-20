@@ -390,7 +390,9 @@ p {
 
     box-shadow: 0 4px 10px rgba(142, 68, 173, 0.15);
 
-    animation: aparecerNovios 1s ease-out;
+    animation:
+    aparecerNovios 1s ease-out,
+    titilarNovios 1.2s ease-in-out 1s infinite;
 }
 
 @keyframes aparecerNovios {
@@ -407,5 +409,16 @@ p {
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+@keyframes titilarNovios {
+    0%, 100% {
+        background-color: #fff3b0;
+        box-shadow: 0 4px 10px rgba(244, 197, 66, 0.25);
+    }
+
+    50% {
+        background-color: #ffd54f;
+        box-shadow: 0 0 20px rgba(255, 193, 7, 0.8);
     }
 }
