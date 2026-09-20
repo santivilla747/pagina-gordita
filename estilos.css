@@ -373,3 +373,30 @@ p {
     font-weight: bold;
     color: #c2185b;
 }
+
+.dia-novios {
+    text-align: center;
+    font-family: "DynaPuff", cursive;
+    font-size: 24px;
+    color: #8e44ad;
+    margin-top: -5px;
+    margin-bottom: 20px;
+    animation: aparecerNovios 1s ease-out;
+}
+
+@keyframes aparecerNovios {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    70% {
+        opacity: 1;
+        transform: translateY(-5px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
