@@ -83,8 +83,35 @@ const segundos = Math.floor(
 document.getElementById("horas").textContent = horas;
 document.getElementById("minutos").textContent = minutos;
 document.getElementById("segundos").textContent = segundos;
+const numeroSegundos = document.getElementById("segundos");
+
+numeroSegundos.classList.remove("pulso");
+
+void numeroSegundos.offsetWidth;
+
+numeroSegundos.classList.add("pulso");
 }
 
 actualizarContador();
 
 setInterval(actualizarContador, 1000);
+
+const elementosScroll = document.querySelectorAll(".aparecer-scroll");
+
+const observador = new IntersectionObserver(function (entradas) {
+
+    entradas.forEach(function (entrada) {
+
+        if (entrada.isIntersecting) {
+            entrada.target.classList.add("visible");
+        }
+
+    });
+
+}, {
+    threshold: 0.20
+});
+
+elementosScroll.forEach(function (elemento) {
+    observador.observe(elemento);
+});
