@@ -33,7 +33,7 @@ body {
     color: #f5e9b8;
     font-family: Arial, sans-serif;
 
-    animation: fondoVivo 18s ease-in-out infinite alternate;
+    
 }
 h1 {
     text-align: center;
@@ -85,8 +85,8 @@ animation:
     border: 1px solid rgba(255, 225, 120, 0.28);
     box-shadow: 0 6px 25px rgba(0, 0, 0, 0.30);
 
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     }
 
 p {
@@ -668,19 +668,4 @@ hr {
     margin-left: auto;
     margin-right: auto;
 }
-
-@keyframes fondoVivo {
-    0% {
-        background-position:
-            50% 0%,
-            90% 70%,
-            0 0;
-    }
-
-    100% {
-        background-position:
-            45% 5%,
-            85% 65%,
-            9px 9px;
-    }
 }
