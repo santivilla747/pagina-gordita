@@ -32,9 +32,8 @@ body {
 
     color: #f5e9b8;
     font-family: Arial, sans-serif;
-
-    
 }
+    
 h1 {
     text-align: center;
 
@@ -57,9 +56,7 @@ h1 {
     color: transparent;
 
     background-size: 250% auto;
-animation:
-    aparecer 0.8s ease,
-    brilloTitulo 5s linear infinite;
+    animation: aparecer 0.8s ease;
 }
 
    h2 {
@@ -108,13 +105,9 @@ p {
     }
     }
 
-
-
-
-
 @keyframes caer {
     0% {
-        transform: translateY(-80px) translateX(0) rotate(0deg);
+        transform: translate3d(0, -80px, 0) rotate(0deg);
         opacity: 0;
     }
 
@@ -123,11 +116,11 @@ p {
     }
 
     30% {
-        transform: translateY(30vh) translateX(var(--movimiento)) rotate(100deg);
+        transform: translate3d(var(--movimiento), 30vh, 0) rotate(100deg);
     }
 
     60% {
-        transform: translateY(60vh) translateX(0) rotate(220deg);
+        transform: translate3d(0, 60vh, 0) rotate(220deg);
     }
 
     90% {
@@ -135,100 +128,66 @@ p {
     }
 
     100% {
-        transform: translateY(110vh) translateX(var(--movimiento)) rotate(360deg);
+        transform: translate3d(var(--movimiento), 110vh, 0) rotate(360deg);
         opacity: 0;
     }
 }
 
 .corazones span {
-  position: fixed;
-  top: 0;
-  font-size: 30px;
-  animation: caer 6s linear infinite;
-  z-index: 9999;
-  pointer-events: none;
+    position: fixed;
+    top: 0;
+
+    z-index: 9999;
+    pointer-events: none;
+
+    animation-name: caer;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+    will-change: transform;
 }
 
+/* FLOR 1 */
 .corazones span:nth-child(1) {
-  left: 10%;
-  animation-duration: 5s;
-  animation-delay: 0s;
+    left: 10%;
+    font-size: 20px;
+    animation-duration: 5s;
+    animation-delay: 0s;
 }
 
+/* FLOR 2 */
 .corazones span:nth-child(2) {
-  left: 20%;
-  animation-duration: 7s;
-  animation-delay: 1s;
+    left: 28%;
+    font-size: 32px;
+    animation-duration: 7s;
+    animation-delay: 1s;
 }
 
+/* FLOR 3 */
 .corazones span:nth-child(3) {
-  left: 35%;
-  animation-duration: 6s;
-  animation-delay: 2.5s;
+    left: 47%;
+    font-size: 24px;
+    animation-duration: 6s;
+    animation-delay: 2.5s;
 }
 
+/* FLOR 4 */
 .corazones span:nth-child(4) {
-  left: 48%;
-  animation-duration: 8s;
-  animation-delay: 0.5s;
+    left: 68%;
+    font-size: 38px;
+    animation-duration: 8s;
+    animation-delay: 0.5s;
 }
 
+/* FLOR 5 */
 .corazones span:nth-child(5) {
-  left: 60%;
-  animation-duration: 5.5s;
-  animation-delay: 3s;
+    left: 88%;
+    font-size: 22px;
+    animation-duration: 5.5s;
+    animation-delay: 3s;
 }
 
-.corazones span:nth-child(6) {
-  left: 72%;
-  animation-duration: 7.5s;
-  animation-delay: 1.5s;
-}
-
-.corazones span:nth-child(7) {
-  left: 85%;
-  animation-duration: 6.5s;
-  animation-delay: 4s;
-}
-
-.corazones span:nth-child(8) {
-  left: 95%;
-  animation-duration: 9s;
-  animation-delay: 2s;
-}
-
-.corazones span:nth-child(1) {
-  font-size: 20px;
-}
-
-.corazones span:nth-child(2) {
-  font-size: 35px;
-}
-
-.corazones span:nth-child(3) {
-  font-size: 25px;
-}
-
-.corazones span:nth-child(4) {
-  font-size: 45px;
-}
-
-.corazones span:nth-child(5) {
-  font-size: 22px;
-}
-
-.corazones span:nth-child(6) {
-  font-size: 38px;
-}
-
-.corazones span:nth-child(7) {
-  font-size: 28px;
-}
-
-.corazones span:nth-child(8) {
-  font-size: 50px;
-}
-
+/* Movimiento lateral alternado */
 .corazones span:nth-child(odd) {
     --movimiento: 20px;
 }
@@ -238,7 +197,7 @@ p {
 }
 
 .corazones span:nth-child(3n) {
-    filter: opacity(65%);
+    opacity: 0.75;
 }
 
 .gif-capibara {
@@ -276,6 +235,14 @@ p {
     opacity: 0; 
     transform: translateY(-20px); 
     transition: opacity 0.8s ease, transform 0.8s ease; 
+}
+
+.carta p {
+    font-family: "Caveat", cursive;
+    font-size: 27px;
+    line-height: 1.45;
+    letter-spacing: 0.2px;
+    color: #493b20;
 }
 
 /* 🚨 ¡ESTO ES CLAVE! Si esto no está, la carta nunca se ve 🚨 */
@@ -477,8 +444,6 @@ p {
 
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.20);
 
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
 }
 
 .tiempo span {
@@ -606,15 +571,7 @@ hr {
     pointer-events: none;
 }
 
-@keyframes brilloTitulo {
-    0% {
-        background-position: 0% center;
-    }
 
-    100% {
-        background-position: 250% center;
-    }
-}
 
 .tarjeta-seccion {
     position: relative;
@@ -667,5 +624,4 @@ hr {
     max-width: 520px;
     margin-left: auto;
     margin-right: auto;
-}
 }
