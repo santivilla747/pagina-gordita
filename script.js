@@ -22,19 +22,6 @@ sobre.addEventListener("click", function () {
         // 3. Le agregamos la clase que hace la magia de aparecer suavemente
         carta.classList.add("mostrar");
 
-        // Crea los brillitos (tu código)
-        for (let i = 0; i < 8; i++) {
-            const brillo = document.createElement("span");
-            brillo.textContent = "✨";
-            brillo.classList.add("brillo");
-            brillo.style.left = Math.random() * 90 + "%";
-            brillo.style.top = Math.random() * 80 + "%";
-            carta.appendChild(brillo);
-
-            brillo.addEventListener("animationend", function () {
-                brillo.remove();
-            });
-        }
 
         // Baja la pantalla hacia la carta
         carta.scrollIntoView({
@@ -83,13 +70,7 @@ const segundos = Math.floor(
 document.getElementById("horas").textContent = horas;
 document.getElementById("minutos").textContent = minutos;
 document.getElementById("segundos").textContent = segundos;
-const numeroSegundos = document.getElementById("segundos");
 
-numeroSegundos.classList.remove("pulso");
-
-void numeroSegundos.offsetWidth;
-
-numeroSegundos.classList.add("pulso");
 }
 
 actualizarContador();
