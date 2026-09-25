@@ -5,7 +5,7 @@
 html {
     scroll-behavior: smooth;
     /* Evita el rebote blanco feo en los extremos arriba/abajo del iPhone */
-    background-color: #24151d;
+    background-color: #321b27;
     -webkit-text-size-adjust: 100%;
 }
  
