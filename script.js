@@ -52,6 +52,13 @@ function actualizarContador() {
     const ahora = new Date();
 
     const diferencia = fechaMendoza - ahora;
+    if (diferencia <= 0) {
+    document.getElementById("dias").textContent = "0";
+    document.getElementById("horas").textContent = "0";
+    document.getElementById("minutos").textContent = "0";
+    document.getElementById("segundos").textContent = "0";
+    return;
+}
 
     const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
 
@@ -85,6 +92,7 @@ const observador = new IntersectionObserver(function (entradas) {
 
         if (entrada.isIntersecting) {
             entrada.target.classList.add("visible");
+            observador.unobserve(entrada.target);
         }
 
     });
